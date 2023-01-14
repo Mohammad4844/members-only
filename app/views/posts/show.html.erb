@@ -1,0 +1,19 @@
+
+<div class="container-fluid">
+
+  <h1>
+    <%= @post[:title] %>
+  </h1>
+    
+  <h4>Created by: 
+    <% if user_signed_in? %>
+      <%= @post.user.username %>
+    <% else %>
+      <s>REDACTED</s>
+    <% end %>
+  </h4>
+
+  <p>
+    <%= @post[:body] %>
+  </p>
+</div>

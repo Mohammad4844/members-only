@@ -1,0 +1,9 @@
+<div class="container-fluid">
+<h1>Posts: </h1>
+  <div  style="display:flex; gap: 10px; flex-direction:column">
+  
+    <% @posts.each do |post| %>
+      <%= render post %>
+    <% end %>
+  </div>
+</div>

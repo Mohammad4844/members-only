@@ -1,0 +1,14 @@
+
+<div class="card" style="width: 90%;">
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to post[:title], post %></h5>
+    <h6>Created by: 
+      <% if user_signed_in? %>
+        <%= post.user.username %>
+      <% else %>
+        <s>REDACTED</s>
+      <% end %>
+    </h6>
+    <p class="card-text"><%= post[:body] %></p>
+  </div>
+</div>
